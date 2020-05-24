@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!--因为后台管理的页面几乎都具有相同的<head>，所以把<head>标签中的信息全部包含在header-fragment中，以便它们的通用-->
+<head th:fragment="header-fragment">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>books-mall 后台管理系统</title>
+    <!-- Tell the browser to be responsive to screen width, bootstrap 的特有属性 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="shortcut icon" th:href="@{/admin/dist/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/admin/dist/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/ionicons.min.css}">
+    <link rel="stylesheet" th:href="@{/admin/dist/css/main.css}">
+    <!--后端管理系统中会用到的插件-->
+    <link rel="stylesheet" th:href="@{/admin/plugins/bootstrap/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert/sweetalert.css}"/>
+    <link rel="stylesheet" th:href="@{/admin/plugins/jqgrid-5.3.0/ui.jqgrid-bootstrap4.css}"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/admin/dist/css/adminlte.min.css}">
+</head>
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom" th:fragment="header-nav">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item d-none d-sm-inline-block">
+            <a th:href="@{/admin/index}" class="nav-link">Dashboard</a>
+        </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <!-- 链接对应到商品系统的首页 -->
+            <a class="nav-link" th:href="@{/index}">
+                <i class="fa fa-star-half-full">&nbsp;&nbsp;books-mall首页</i>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="fa fa-user">&nbsp;&nbsp;关于作者</i>
+            </a>
+
+            <!--隐藏信息，通过下拉菜单展现-->
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                    <i class="fa fa-user-o mr-2"></i> 姓名
+                    <span class="float-right text-muted text-sm">yu</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                    <i class="fa fa-user-secret mr-2"></i> 身份
+                    <span class="float-right text-muted text-sm">学生</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">
+                    <i class="fa fa-address-card mr-2"></i> 邮箱
+                    <span class="float-right text-muted text-sm">2365941823@qq.com</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<!-- /.navbar -->
+</html>
