@@ -62,26 +62,20 @@ public class BooksMallGoodsCategoryController {
             return ResultGenerator.genFailResult("缺少参数！");
         }
         GoodsCategory category = booksMallCategoryService.getGoodsCategoryById(categoryId);
-        //既不是一级分类也不是二级分类则为不返回数据
-        if (category == null || category.getCategoryLevel() == BooksMallCategoryLevelEnum.LEVEL_THREE.getLevel()) {
+        //若不是一级分类则为不返回数据
+        if (category == null || category.getCategoryLevel() == BooksMallCategoryLevelEnum.LEVEL_TWO.getLevel()) {
             return ResultGenerator.genFailResult("参数异常！");
         }
         Map categoryResult = new HashMap(2);
+
+        //如果是一级分类则返回当前一级分类下的所有二级分类
         if (category.getCategoryLevel() == BooksMallCategoryLevelEnum.LEVEL_ONE.getLevel()) {
-            //如果是一级分类则返回当前一级分类下的所有二级分类，以及二级分类列表中第一条数据下的所有三级分类列表
             //查询一级分类列表中第一个实体的所有二级分类
             List<GoodsCategory> secondLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(categoryId), BooksMallCategoryLevelEnum.LEVEL_TWO.getLevel());
             if (!CollectionUtils.isEmpty(secondLevelCategories)) {
-                //查询二级分类列表中第一个实体的所有三级分类
-                List<GoodsCategory> thirdLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(secondLevelCategories.get(0).getCategoryId()), BooksMallCategoryLevelEnum.LEVEL_THREE.getLevel());
+                //查询得到的二级分类列表不为空时
                 categoryResult.put("secondLevelCategories", secondLevelCategories);
-                categoryResult.put("thirdLevelCategories", thirdLevelCategories);
             }
-        }
-        if (category.getCategoryLevel() == BooksMallCategoryLevelEnum.LEVEL_TWO.getLevel()) {
-            //如果是二级分类则返回当前分类下的所有三级分类列表
-            List<GoodsCategory> thirdLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(categoryId), BooksMallCategoryLevelEnum.LEVEL_THREE.getLevel());
-            categoryResult.put("thirdLevelCategories", thirdLevelCategories);
         }
         return ResultGenerator.genSuccessResult(categoryResult);
     }

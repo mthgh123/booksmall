@@ -214,6 +214,7 @@ $('#cancelButton').click(function () {
     window.location.href = "/admin/goods";
 });
 
+//下方代码对应两级联动的选择框
 $('#levelOne').on('change', function () {
     $.ajax({
         url: '/admin/categories/listForSelect?categoryId=' + $(this).val(),

@@ -61,6 +61,7 @@ public class BooksMallGoodsController {
         return "error/error_5xx";
     }
 
+    //修改书籍信息的控制器方法
     @GetMapping("/goods/edit/{goodsId}")
     public String edit(HttpServletRequest request, @PathVariable("goodsId") Long goodsId) {
         request.setAttribute("path", "edit");
@@ -70,30 +71,22 @@ public class BooksMallGoodsController {
         }
         if (booksMallGoods.getGoodsCategoryId() > 0) {
             if (booksMallGoods.getGoodsCategoryId() != null || booksMallGoods.getGoodsCategoryId() > 0) {
-                //有分类字段则查询相关分类数据返回给前端以供分类的三级联动显示
+                //有分类字段则查询相关分类数据返回给前端以供分类的二级联动显示
                 GoodsCategory currentGoodsCategory = booksMallCategoryService.getGoodsCategoryById(booksMallGoods.getGoodsCategoryId());
-                //商品表中存储的分类id字段为三级分类的id，不为三级分类则是错误数据
-                if (currentGoodsCategory != null && currentGoodsCategory.getCategoryLevel() == BooksMallCategoryLevelEnum.LEVEL_THREE.getLevel()) {
-                    //查询所有的一级分类
+                //商品表中存储的分类id字段为二级分类的id，不为二级分类则是错误数据，下方进行判空以及判断是否为二级分类
+                if (currentGoodsCategory != null && currentGoodsCategory.getCategoryLevel() == BooksMallCategoryLevelEnum.LEVEL_TWO.getLevel()) {
+                    //查询所有的一级分类，和上面的("/goods/edit")控制器方法的查询代码一样
                     List<GoodsCategory> firstLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(0L), BooksMallCategoryLevelEnum.LEVEL_ONE.getLevel());
-                    //根据parentId查询当前parentId下所有的三级分类
-                    List<GoodsCategory> thirdLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(currentGoodsCategory.getParentId()), BooksMallCategoryLevelEnum.LEVEL_THREE.getLevel());
-                    //查询当前三级分类的父级二级分类
-                    GoodsCategory secondCategory = booksMallCategoryService.getGoodsCategoryById(currentGoodsCategory.getParentId());
-                    if (secondCategory != null) {
-                        //根据parentId查询当前parentId下所有的二级分类
-                        List<GoodsCategory> secondLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(secondCategory.getParentId()), BooksMallCategoryLevelEnum.LEVEL_TWO.getLevel());
-                        //查询当前二级分类的父级一级分类
-                        GoodsCategory firestCategory = booksMallCategoryService.getGoodsCategoryById(secondCategory.getParentId());
-                        if (firestCategory != null) {
-                            //所有分类数据都得到之后放到request对象中供前端读取
-                            request.setAttribute("firstLevelCategories", firstLevelCategories);
-                            request.setAttribute("secondLevelCategories", secondLevelCategories);
-                            request.setAttribute("thirdLevelCategories", thirdLevelCategories);
-                            request.setAttribute("firstLevelCategoryId", firestCategory.getCategoryId());
-                            request.setAttribute("secondLevelCategoryId", secondCategory.getCategoryId());
-                            request.setAttribute("thirdLevelCategoryId", currentGoodsCategory.getCategoryId());
-                        }
+                    //根据parentId查询当前parentId下所有的二级分类
+                    List<GoodsCategory> secondLevelCategories = booksMallCategoryService.selectByLevelAndParentIdsAndNumber(Collections.singletonList(currentGoodsCategory.getParentId()), BooksMallCategoryLevelEnum.LEVEL_TWO.getLevel());
+                    //查询当前二级分类的父级一级分类
+                    GoodsCategory firstCategory = booksMallCategoryService.getGoodsCategoryById(currentGoodsCategory.getParentId());
+                    if (firstCategory != null) {
+                        //所有分类数据都得到之后放到request对象中供前端读取
+                        request.setAttribute("firstLevelCategories", firstLevelCategories);
+                        request.setAttribute("secondLevelCategories", secondLevelCategories);
+                        request.setAttribute("firstLevelCategoryId", firstCategory.getCategoryId());
+                        request.setAttribute("secondLevelCategoryId", currentGoodsCategory.getCategoryId());
                     }
                 }
             }
