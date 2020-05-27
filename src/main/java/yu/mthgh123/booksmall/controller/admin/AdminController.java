@@ -60,7 +60,7 @@ public class AdminController {
             session.setAttribute("loginUserId", adminUser.getAdminUserId());
             //session过期时间设置为7200秒 即两小时
             //session.setMaxInactiveInterval(60 * 60 * 2);
-            //登录成功之后，并不是跳转到后台管理系统首页，而是重定向到/admin/index对应的方法，由该方法先设置path，之后再跳转到/admin/index页面
+            //登录成功之后，并不是跳转到后台管理系统首页，而是重定向到/admin/index对应的控制器方法，由该方法先设置path，之后再跳转到/admin/index页面
             return "redirect:/admin/index";
         } else {
             session.setAttribute("errorMsg", "登陆失败，请联系作者获得测试账号");
