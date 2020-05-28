@@ -228,13 +228,6 @@ $('#levelOne').on('change', function () {
                     levelTwoSelect += '<option value=\"' + secondLevelCategories[i].categoryId + '\">' + secondLevelCategories[i].categoryName + '</option>';
                 }
                 $('#levelTwo').html(levelTwoSelect);
-                var levelThreeSelect = '';
-                var thirdLevelCategories = result.data.thirdLevelCategories;
-                var length3 = thirdLevelCategories.length;
-                for (var i = 0; i < length3; i++) {
-                    levelThreeSelect += '<option value=\"' + thirdLevelCategories[i].categoryId + '\">' + thirdLevelCategories[i].categoryName + '</option>';
-                }
-                $('#levelThree').html(levelThreeSelect);
             } else {
                 swal(result.message, {
                     icon: "error",
@@ -250,30 +243,3 @@ $('#levelOne').on('change', function () {
     });
 });
 
-$('#levelTwo').on('change', function () {
-    $.ajax({
-        url: '/admin/categories/listForSelect?categoryId=' + $(this).val(),
-        type: 'GET',
-        success: function (result) {
-            if (result.resultCode == 200) {
-                var levelThreeSelect = '';
-                var thirdLevelCategories = result.data.thirdLevelCategories;
-                var length = thirdLevelCategories.length;
-                for (var i = 0; i < length; i++) {
-                    levelThreeSelect += '<option value=\"' + thirdLevelCategories[i].categoryId + '\">' + thirdLevelCategories[i].categoryName + '</option>';
-                }
-                $('#levelThree').html(levelThreeSelect);
-            } else {
-                swal(result.message, {
-                    icon: "error",
-                });
-            }
-            ;
-        },
-        error: function () {
-            swal("操作失败", {
-                icon: "error",
-            });
-        }
-    });
-});
