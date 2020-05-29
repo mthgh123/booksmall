@@ -62,6 +62,7 @@ public class BooksMallIndexConfigServiceImpl implements BooksMallIndexConfigServ
         return null;
     }
 
+    //从数据库查询显示于首页的数据
     @Override
     public List<BooksMallIndexConfigGoodsVO> getConfigGoodsesForIndex(int configType, int number) {
         List<BooksMallIndexConfigGoodsVO> booksMallIndexConfigGoodsVOS = new ArrayList<>(number);
