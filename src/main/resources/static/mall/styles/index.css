@@ -393,7 +393,7 @@
     color: #605751;
 }
 
-#content #new_books_online {
+#content .books_display {
     width: 1226px;
     position: relative;
     flex-shrink: 0;
@@ -402,22 +402,22 @@
     background-color: #f5f5f5;
 }
 
-#content #new_books_online > h2 {
+#content .books_display > h2 {
     height: 58px;
     line-height: 58px;
 }
 
-#content #new_books_online .more {
+#content .books_display .more {
     position: absolute;
     top: 18px;
     right: 30px;
 }
 
-#content #new_books_online .more:hover {
+#content .books_display .more:hover {
     color: #1baeae;
 }
 
-#content #new_books_online ul {
+#content .books_display ul {
     display: flex;
     height: 614px;
     justify-content: space-between;
@@ -425,7 +425,7 @@
     flex-wrap: wrap;
 }
 
-#content #new_books_online ul li {
+#content .books_display ul li {
     width: 234px;
     height: 314px;
     background-color: #fff;
@@ -434,22 +434,22 @@
     margin-right: 6px;
 }
 
-#content #new_books_online ul li:nth-child(1) .hot-image,
-#content #new_books_online ul li:nth-child(6) .hot-image {
+#content .books_display ul li:nth-child(1) .hot-image,
+#content .books_display ul li:nth-child(6) .hot-image {
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
-#content #new_books_online ul li:hover {
+#content .books_display ul li:hover {
     box-shadow: 0px 0px 30px #ccc;
 }
 
-#content #new_books_online ul li:hover .comment {
+#content .books_display ul li:hover .comment {
     transform: translateY(0);
 }
 
-#content #new_books_online ul li a {
+#content .books_display ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -461,7 +461,7 @@
     overflow: hidden;
 }
 
-#content #new_books_online ul li a .info {
+#content .books_display ul li a .info {
     width: 104px;
     height: 20px;
     text-align: center;
@@ -470,38 +470,40 @@
     font-size: 10px;
 }
 
-#content #new_books_online ul li a .new {
+#content .books_display ul li a .new {
     background-color: #83c44e;
 }
 
-#content #new_books_online ul li a .discount {
-    background-color: #f00;
+#content .books_display ul li a .discount {
+    font-size: 12px;
+    color: #b0b0b0;
+    margin: 15px 0;
 }
 
-#content #new_books_online ul li a > p {
+#content .books_display ul li a > p {
     height: 25px;
     line-height: 25px;
     font-size: 14px;
 }
 
-#content #new_books_online ul li a .item_price {
+#content .books_display ul li a .item_price {
     color: #1baeae;
 }
 
-#content #new_books_online ul li a .counter {
+#content .books_display ul li a .counter {
     height: 15px;
     line-height: 15px;
     color: #aaa;
     font-size: 12px;
 }
 
-#content #new_books_online ul li a img {
+#content .books_display ul li a img {
     width: 160px;
     height: 160px;
     margin: 10px 0 20px;
 }
 
-#content #new_books_online ul li a .comment {
+#content .books_display ul li a .comment {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -516,90 +518,7 @@
     text-align: left;
 }
 
-#content #new_books_online ul li a .comment p {
+#content .books_display ul li a .comment p {
     font-size: 12px;
     margin-top: 5px;
-}
-
-/*-----------------------分割线-----------------------*/
-.book {
-    display: inline-block;
-    width: 157px;
-    height: 260px;
-    margin-left: 11px;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.book .book-cover {
-    display: block;
-    width: 125px;
-    height: 165px;
-    margin: 0 auto;
-    padding: 16px;
-    position: relative;
-}
-
-.book .book-title {
-    font-size: 15px;
-    margin-top: 2px;
-    color: #555;
-    width: 150px;
-    display: block;
-    padding-left: 7px;
-    word-break: break-all;
-    height: 42px;
-    line-height: 21px;
-    overflow: hidden;
-    text-decoration: none;
-    outline: 0;
-    transition: all .3s;
-}
-
-.book .book-price {
-    color: #c97618;
-    font-size: 14px;
-    height: 23px;
-    line-height: 23px;
-}
-
-.book .ic-book-wrap {
-    position: relative;
-    z-index: 2;
-}
-.book .ic-book-wrap .ic-book {
-    position: absolute;
-    width: 45px;
-    height: 47px;
-    top: -85px;
-    *top: -12px;
-    left: -10px;
-}
-#content #new_books_online ul li div b{
-    font-style: normal;
-    font-weight: 400;
-}
-.book .book-cover .book-cover-shadow {
-    background-position: -157px -619px;
-}
-.book .book-cover .book-cover-shadow {
-    _background: none!important;
-    width: 7px;
-    height: 166px;
-    position: absolute;
-    left: 16px;
-    top: 17px;
-    z-index: 1;
-    background-repeat: no-repeat;
-}
-
-.book .book-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    filter: progid:DXImageTransform.Microsoft.Shadow(color='#b5b4b2', Direction=135, Strength=5);
-    -webkit-box-shadow: 0 3px 5px #b0b0b0;
-    -moz-box-shadow: 0 3px 5px #b0b0b0;
-    box-shadow: 0 3px 5px #b0b0b0;
 }

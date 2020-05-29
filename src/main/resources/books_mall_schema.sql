@@ -46,8 +46,9 @@ CREATE TABLE `books_mall_carousel`  (
 -- link https://github.com/
 -- Records of books_mall_carousel
 -- ----------------------------
-INSERT INTO `books_mall_carousel` VALUES (2, 'https://newbee-mall.oss-cn-beijing.aliyuncs.com/images/banner1.png', 'https://www.codeyu.cn/', 13, 0, '2020-05-19 00:00:00', 0, '2020-05-19 00:00:00', 0);
-INSERT INTO `books_mall_carousel` VALUES (5, 'https://newbee-mall.oss-cn-beijing.aliyuncs.com/images/banner2.png', 'https://www.codeyu.cn/', 0, 0, '2020-05-19 00:00:00', 0, '2020-05-19 00:00:00', 0);
+INSERT INTO `books_mall_carousel` VALUES (1, 'http://localhost:8080/upload/carousel_1.jpg', 'https://www.codeyu.cn/', 30, 0, '2020-05-29 00:00:00', 0, '2020-05-29 00:00:00', 0);
+INSERT INTO `books_mall_carousel` VALUES (2, 'http://localhost:8080/upload/carousel_2.jpg', 'https://www.codeyu.cn/', 20, 0, '2020-05-29 00:00:00', 0, '2020-05-29 00:00:00', 0);
+INSERT INTO `books_mall_carousel` VALUES (3, 'http://localhost:8080/upload/carousel_3.jpg', 'https://www.codeyu.cn/', 10, 0, '2020-05-29 00:00:00', 0, '2020-05-29 00:00:00', 0);
 
 -- ----------------------------
 -- author yu
@@ -210,9 +211,14 @@ INSERT INTO `books_mall_index_config` VALUES (3, '热门推荐 云球（第三�
 INSERT INTO `books_mall_index_config` VALUES (4, '热门推荐 三体（全三册）', 3, 10013, '##', 100, 0, '2020-05-28 17:08:56', 0, '2020-05-28 17:08:56', 0);
 INSERT INTO `books_mall_index_config` VALUES (5, '热门推荐 永乐大帝', 3, 10010, '##', 50, 0, '2020-05-28 23:23:38', 0, '2020-05-28 23:23:38', 0);
 INSERT INTO `books_mall_index_config` VALUES (6, '热门推荐 韩非子（下）', 3, 10012, '##', 95, 0, '2020-05-28 17:10:36', 0, '2020-05-28 17:10:36', 0);
+INSERT INTO `books_mall_index_config` VALUES (13, '热门推荐 阳台上', 3, 10021, '##', 90, 0, '2020-05-29 17:08:02', 0, '2020-05-29 17:08:02', 0);
+INSERT INTO `books_mall_index_config` VALUES (14, '热门推荐 欧游杂记', 3, 10011, '##', 100, 0, '2020-05-29 17:08:56', 0, '2020-05-29 17:08:56', 0);
+INSERT INTO `books_mall_index_config` VALUES (15, '热门推荐 国富论', 3, 10031, '##', 50, 0, '2020-05-29 23:23:38', 0, '2020-05-29 23:23:38', 0);
+INSERT INTO `books_mall_index_config` VALUES (16, '热门推荐 商业的本质', 3, 10026, '##', 95, 0, '2020-05-29 17:10:36', 0, '2020-05-29 17:10:36', 0);
 INSERT INTO `books_mall_index_config` VALUES (7, '新书上线 花开半夏', 4, 10006, '##', 100, 0, '2020-05-28 17:11:05', 0, '2020-05-28 17:11:05', 0);
 INSERT INTO `books_mall_index_config` VALUES (8, '新书上线 尽余生', 4, 10004, '##', 102, 0, '2020-05-28 17:11:44', 0, '2020-05-28 17:11:44', 0);
 INSERT INTO `books_mall_index_config` VALUES (9, '新书上线 何以青衫薄', 4, 10005, '##', 101, 0, '2020-05-28 17:11:58', 0, '2020-05-28 17:11:58', 0);
 INSERT INTO `books_mall_index_config` VALUES (10, '新书上线 寻找', 4, 10008, '##', 100, 0, '2020-05-28 17:12:29', 0, '2020-05-28 17:12:29', 0);
 INSERT INTO `books_mall_index_config` VALUES (11, '新书上线 管理学32定律', 4, 10029, '##', 50, 0, '2020-05-28 23:26:05', 0, '2020-05-28 23:26:05', 0);
 INSERT INTO `books_mall_index_config` VALUES (12, '新书上线 黑天鹅', 4, 10028, '##', 105, 0, '2020-05-28 23:26:32', 0, '2020-05-28 23:26:32', 0);
+INSERT INTO `books_mall_index_config` VALUES (17, '新书上线 房思琪的初恋乐园', 4, 10022, '##', 103, 0, '2020-05-29 21:06:32', 0, '2020-05-29 21:06:32', 0);

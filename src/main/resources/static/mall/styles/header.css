@@ -156,7 +156,7 @@
 #nav .banner_x .logo {
     width: 240px;
     text-indent: -10000px;
-    background: url(../image/index_login_logo_1.png) no-repeat;
+    background: url(../image/books_mall_logo-1.png) no-repeat;
     background-size: 100%;
     background-position: center;
     margin-top: 10px;
@@ -193,7 +193,7 @@
 
 #nav .banner_x .list li a:hover
 {
-
+    color: #fff;
 }
 
 #nav .banner_x .list li a:before

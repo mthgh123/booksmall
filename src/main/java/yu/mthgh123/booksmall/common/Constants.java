@@ -9,14 +9,14 @@ public class Constants {
     //public final static String FILE_UPLOAD_DIC = "/opt/image/upload/";//上传文件的默认url前缀，根据部署设置自行修改
     public final static String FILE_UPLOAD_DIC = "D:\\各种软件运行工作目录\\books_mall\\src\\main\\resources\\books_picture\\upload\\";//上传文件的默认url前缀，根据部署设置自行修改。注意upload后面要加上双斜杠\\
 
-    public final static int INDEX_CAROUSEL_NUMBER = 5;//首页轮播图数量(可根据自身需求修改)
+    public final static int INDEX_CAROUSEL_NUMBER = 3;//首页轮播图数量(可根据自身需求修改)
 
     public final static int INDEX_CATEGORY_NUMBER = 10;//首页一级分类的最大数量
 
     public final static int SEARCH_CATEGORY_NUMBER = 8;//搜索页一级分类的最大数量
 
-    public final static int INDEX_BOOKS_HOT_NUMBER = 4;//首页热门推荐书籍数量
-    public final static int INDEX_BOOKS_NEW_NUMBER = 5;//首页新书上线书籍数量
+    public final static int INDEX_BOOKS_HOT_NUMBER = 10;//首页热门推荐书籍数量
+    public final static int INDEX_BOOKS_NEW_NUMBER = 7;//首页新书上线书籍数量
 
     public final static int SHOPPING_CART_ITEM_TOTAL_NUMBER = 13;//购物车中商品的最大数量(可根据自身需求修改)
 
