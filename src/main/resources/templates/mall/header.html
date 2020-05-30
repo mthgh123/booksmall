@@ -20,15 +20,14 @@
             <li><a href="##">分类</a></li>
             <li><a href="##">我的书架</a></li>
         </ul>
-        <!--搜索框-->
-        <div class="fr">
+        <!--搜索框--><!--       <div class="fr">
             <div class="search">
                 <input class="text" type="text" id="keyword" autocomplete="off">
                 <div class="search_hot">
                 </div>
             </div>
             <div class="button iconfont icon-search" onclick="search()"></div>
-        </div>
+        </div>-->
     </div>
 </nav>
 <header id="header" th:fragment="header-fragment">
@@ -36,7 +35,7 @@
         <ul class="fl">
             <li><a th:href="@{/index}">books-mall</a></li>
             <li><a th:href="@{/admin}">后台管理系统</a></li>
-            <a href="#">课程文档</a>
+            <li><a href="#">讲解文档</a></li>
             <li><a href="https://github.com/mthgh123/booksmall">GitHub 地址</a></li>
         </ul>
         <div class="fr">
@@ -47,11 +46,6 @@
                         <li>
                             <a th:href="@{/personal}">
                                 个人中心
-                            </a>
-                        </li>
-                        <li>
-                            <a th:href="@{/orders}">
-                                我的订单
                             </a>
                         </li>
                         <li>
@@ -78,10 +72,6 @@
                     <li><a th:href="@{/login}">登录</a></li>
                     <li><a th:href="@{/register}">注册</a></li>
                 </ul>
-                <div class="shopcart">
-                    <a href="##" style="color: white;"><i class="iconfont icon-cart"></i>
-                        购物车(0)</a>
-                </div>
             </th:block>
         </div>
     </div>

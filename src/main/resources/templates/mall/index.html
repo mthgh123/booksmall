@@ -65,50 +65,6 @@
             </th:block>
         </ul>
     </div>
-
-    <div id="hot_books">
-        <h2>新品上线</h2>
-        <ul>
-            <!-- 已配置新品则显示配置内容 -->
-            <th:block th:unless="${#lists.isEmpty(newGoodses)}">
-                <th:block th:each="newGoods : ${newGoodses}">
-                    <li>
-                        <a th:href="@{'/goods/detail/'+${newGoods.goodsId}}">
-                            <img th:src="@{${newGoods.goodsCoverImg}}" th:alt="${newGoods.goodsName}">
-                            <p class="name" th:text="${newGoods.goodsName}">NewBeeMall</p>
-                            <p class="discount" th:text="${newGoods.goodsIntro}">NewBeeMall</p>
-                            <p class="item_price" th:text="${newGoods.sellingPrice}">NewBeeMall</p>
-                        </a>
-                    </li>
-                </th:block>
-            </th:block>
-        </ul>
-    </div>
-
-
-    <!--<div id="new_books_online">
-        <h2>新书上线</h2>
-        <a th:href="@{/index}" class="more">更多>></a>
-        <ul>
-            &lt;!&ndash; 已配置推荐商品则显示配置内容 &ndash;&gt;
-            <th:block th:unless="${#lists.isEmpty(newBooks)}">
-                <th:block th:each="newBook : ${newBooks}">
-                    <li>
-                        <a class="book-title" th:href="@{'/goods/detail/'+${newBook.goodsId}}">
-                            <div class="book-cover">
-                                <b class="ic-book-wrap"></b>
-                                    <b class="ic-book ic-book-0"></b>
-                                <b class="book-cover-shadow"></b>
-                                <img class="book-img" th:src="@{${newBook.goodsCoverImg}}" th:alt="${newBook.goodsName}">
-                            </div>
-                            <p class="name" th:text="${newBook.goodsName}"></p>
-                        </a>
-                        <p class="book-price" th:text="'￥'+${newBook.sellingPrice}"></p>
-                    </li>
-                </th:block>
-            </th:block>
-        </ul>
-    </div>-->
 </div>
 <div th:replace="mall/footer::footer-fragment"></div>
 <!-- jQuery -->

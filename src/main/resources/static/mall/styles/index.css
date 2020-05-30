@@ -121,9 +121,9 @@
 }
 
 #content #banner {
-    width: 1226px;
+    width: 720px;
     flex-shrink: 0;
-    height: 447px;
+    height: 285px;
 }
 
 #content #banner #cate_menu {

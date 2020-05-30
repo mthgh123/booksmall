@@ -33,6 +33,11 @@
     flex-shrink: 0;
     display: flex;
     width: 680px;
+    margin-left: 30px;
+}
+
+#header .center .fl li a:hover {
+    color: #1baeae;
 }
 
 #header .center .fr {
@@ -108,6 +113,9 @@
     width: 98px;
     height: 40px;
 }
+#header .center .fr .login li a:hover {
+    color: #1baeae;
+}
 
 #header .center .fr .login li a {
     display: flex;
@@ -137,9 +145,11 @@
 
 #nav {
     width: 100%;
-    height: 100px;
+    height: 110px;
     flex-shrink: 0;
     position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #nav .banner_x {
@@ -154,12 +164,12 @@
 }
 
 #nav .banner_x .logo {
-    width: 240px;
+    width: 100px;
     text-indent: -10000px;
     background: url(../image/books_mall_logo-1.png) no-repeat;
     background-size: 100%;
     background-position: center;
-    margin-top: 10px;
+    margin: 0 30px;
 }
 
 #nav .banner_x .icon-search {
@@ -171,8 +181,13 @@
 }
 
 #nav .banner_x .list {
+    height: 94px;
     display: flex;
-    height: 100%;
+    border-style:solid;
+    border-radius: 10px;
+    border-width: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #nav .banner_x .list li {
@@ -183,7 +198,7 @@
     position: relative;
     display: block;
     padding: 10px 20px;
-    margin: 20px 0;
+    margin: 25px;
     text-decoration: none;
     text-transform: uppercase;
     color: #262626;
@@ -359,7 +374,7 @@
 
 .site-footer { font-size: 14px; line-height: 1.8; color: #a8aaba; background: #32333b;}
 .w1100 {width: 1100px;margin: 0 auto;}
-.fl {float: left;}
+.fl {float:left;}
 .site-footer a { color: #a8aaba;}
 .site-footer a:hover { color: #1baeae !important;}
 .site-footer .footer-article { padding: 30px 0 20px; overflow: hidden;}
