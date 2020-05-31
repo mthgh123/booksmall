@@ -121,9 +121,9 @@
 }
 
 #content #banner {
-    width: 720px;
+    width: 1226px;
     flex-shrink: 0;
-    height: 285px;
+    height: 350px;
 }
 
 #content #banner #cate_menu {
@@ -521,4 +521,55 @@
 #content .books_display ul li a .comment p {
     font-size: 12px;
     margin-top: 5px;
+}
+
+/*图书机构*/
+.div1{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 22px;
+    width: 1226px;
+    display: block;
+}
+
+.div2{
+    display: block;
+    width: 1226px;
+    height: 154px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.a_1 {
+    width: 315px;
+    height: 150px;
+    display: inline-block;
+    background: url(../image/index_1.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin: 0 30px;
+    box-shadow: 0 3px 5px #b0b0b0;
+    border-radius: 4px;
+}
+.a_2{
+    width: 315px;
+    height: 150px;
+    display: inline-block;
+    background: url(../image/index_2.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin: 0 30px;
+    box-shadow: 0 3px 5px #b0b0b0;
+    border-radius: 4px;
+}
+.a_3{
+    width: 315px;
+    height: 150px;
+    display: inline-block;
+    background: url(../image/index_3.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin: 0 30px;
+    box-shadow: 0 3px 5px #b0b0b0;
+    border-radius: 4px;
 }
