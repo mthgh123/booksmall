@@ -38,7 +38,7 @@
         <h2>热门书籍</h2>
         <a href="##" class="more">更多>></a>
         <ul>
-            <!-- 已配置推荐商品则显示配置内容 -->
+            <!-- 已配置热门书籍则显示配置内容 -->
             <th:block th:unless="${#lists.isEmpty(hotBooks)}">
                 <th:block th:each="hotBook : ${hotBooks}">
                     <li>
@@ -58,7 +58,7 @@
         <h2>新书上线</h2>
         <a href="##" class="more">更多>></a>
         <ul>
-            <!-- 已配置推荐商品则显示配置内容 -->
+            <!-- 已配置新书上线则显示配置内容 -->
             <th:block th:unless="${#lists.isEmpty(newBooks)}">
                 <th:block th:each="newBook : ${newBooks}">
                     <li>

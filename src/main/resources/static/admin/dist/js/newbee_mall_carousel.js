@@ -37,7 +37,7 @@ $(function () {
     });
 
     function coverImageFormatter(cellvalue) {
-        return "<img src='" + cellvalue + "' height=\"120\" width=\"160\" alt='coverImage'/>";
+        return "<img src='" + cellvalue + "' height=\"130\" width=\"320\" alt='coverImage'/>";
     }
 
     $(window).resize(function () {
