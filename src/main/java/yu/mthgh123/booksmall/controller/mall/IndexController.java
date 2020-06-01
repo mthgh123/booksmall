@@ -41,4 +41,17 @@ public class IndexController {
         request.setAttribute("newBooks", newBooks);//新书上线
         return "mall/index";
     }
+
+    @GetMapping({"/index_category","/index_category.html"})
+    public String indexCategory(HttpServletRequest request) {
+        //读取分类数据
+        List<BooksMallIndexCategoryVO> categories = booksMallCategoryService.getCategoriesForIndex();
+        if (CollectionUtils.isEmpty(categories)) {
+            return "error/error_5xx";
+        }
+        List<BooksMallIndexConfigGoodsVO> hotBooks = booksMallIndexConfigService.getConfigGoodsesForIndex(IndexConfigTypeEnum.INDEX_BOOKS_HOT.getType(), Constants.INDEX_BOOKS_HOT_NUMBER);
+        request.setAttribute("categories", categories);//分类数据
+        request.setAttribute("hotBooks", hotBooks);//热门书籍
+        return "mall/index_category";
+    }
 }

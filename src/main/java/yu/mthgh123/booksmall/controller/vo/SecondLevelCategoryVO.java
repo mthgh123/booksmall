@@ -16,7 +16,6 @@ public class SecondLevelCategoryVO implements Serializable {
 
     private String categoryName;
 
-    //private List<ThirdLevelCategoryVO> thirdLevelCategoryVOS;
 
     public Long getCategoryId() {
         return categoryId;
@@ -41,14 +40,6 @@ public class SecondLevelCategoryVO implements Serializable {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
-
-    /*public List<ThirdLevelCategoryVO> getThirdLevelCategoryVOS() {
-        return thirdLevelCategoryVOS;
-    }*/
-
-    /*public void setThirdLevelCategoryVOS(List<ThirdLevelCategoryVO> thirdLevelCategoryVOS) {
-        this.thirdLevelCategoryVOS = thirdLevelCategoryVOS;
-    }*/
 
     public Long getParentId() {
         return parentId;

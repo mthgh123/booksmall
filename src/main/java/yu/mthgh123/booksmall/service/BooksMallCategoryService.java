@@ -30,7 +30,7 @@ public interface BooksMallCategoryService {
      *
      * @return
      */
-    //List<BooksMallIndexCategoryVO> getCategoriesForIndex();
+    List<BooksMallIndexCategoryVO> getCategoriesForIndex();
 
     /**
      * 返回分类数据(搜索页调用)
