@@ -6,32 +6,10 @@
 <header th:replace="mall/header::header-fragment"></header>
 <div id="content">
     <nav th:replace="mall/header::nav-fragment"></nav>
-    <div id="banner">
-        <div class="all-sort-list">
-            <th:block th:each="category : ${categories}">
-                <div class="item">
-                    <h3><span>·</span><a href="##"><th:block th:text="${category.categoryName}"></th:block></a></h3>
-                    <div class="item-list clearfix">
-                        <div class="subitem">
-                            <th:block th:each="secondLevelCategory : ${category.secondLevelCategoryVOS}">
-                                <dl class="fore1">
-                                    <dt><a th:href="@{/index_category}"><th:block th:text="${secondLevelCategory.categoryName}"></th:block></a></dt>
-                                </dl>
-                            </th:block>
-                        </div>
-                    </div>
-                </div>
-            </th:block>
-        </div>
-    </div>
-</div>
-
-<div id="bd" class="bd">
-    <nav th:replace="mall/header::nav-fragment"></nav>
-    <div class="bd-wrap">
-        <div class="body">
-            <div class="aside">
-                <div class="booklist_nav">全部图书分类</div>
+    <div class="category_body">
+        <div class="side_nav">
+            <div class="booklist_nav">全部图书分类</div>
+            <div class="all-sort-list">
                 <th:block th:each="category : ${categories}">
                     <div class="item">
                         <h3><span>·</span><a href="##"><th:block th:text="${category.categoryName}"></th:block></a></h3>
@@ -47,38 +25,35 @@
                     </div>
                 </th:block>
             </div>
-            <div class="main">
-                <div class="hd">
-                    <div class="page_title">Books-Mall | 图书分类</div>
-                    <div class="sort-style">
-                        <h3>排序方式：</h3>
-                        <a th:href="@{/index_category}"><span>热度</span></a>
-                        <a th:href="@{/index_category}"><span>价格</span></a>
-                    </div>
+        </div>
+        <div class="main">
+            <div class="hd">
+                <div class="page_title">Books-Mall | 图书分类</div>
+                <div class="sort-style">
+                    排序方式：
+                    <a th:href="@{/index_category}"><span>热度</span></a>
+                    <a th:href="@{/index_category}"><span>价格</span></a>
                 </div>
-                <div class="books_display">
-                    <ul>
-                        <!-- 已配置热门书籍则显示配置内容 -->
-                        <th:block th:unless="${#lists.isEmpty(hotBooks)}">
-                            <th:block th:each="hotBook : ${hotBooks}">
-                                <li>
-                                    <a th:href="@{'/goods/detail/'+${hotBook.goodsId}}">
-                                        <img th:src="@{${hotBook.goodsCoverImg}}" th:alt="${hotBook.goodsName}">
-                                        <p class="name" th:text="${hotBook.goodsName}"></p>
-                                        <p class="discount" th:text="${hotBook.author}"></p>
-                                        <p class="item_price" th:text="'￥'+${hotBook.sellingPrice}"></p>
-                                    </a>
-                                </li>
-                            </th:block>
+            </div>
+            <div class="category_books_display">
+                <ul>
+                    <th:block th:unless="${#lists.isEmpty(hotBooks)}">
+                        <th:block th:each="hotBook : ${hotBooks}">
+                            <li>
+                                <a th:href="@{'/goods/detail/'+${hotBook.goodsId}}">
+                                    <img th:src="@{${hotBook.goodsCoverImg}}" th:alt="${hotBook.goodsName}">
+                                    <p class="name" th:text="${hotBook.goodsName}"></p>
+                                    <p class="discount" th:text="${hotBook.author}"></p>
+                                    <p class="item_price" th:text="'￥'+${hotBook.sellingPrice}"></p>
+                                </a>
+                            </li>
                         </th:block>
-                    </ul>
-                </div>
+                    </th:block>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-
-
 <div th:replace="mall/footer::footer-fragment"></div>
 <!-- jQuery -->
 <script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
