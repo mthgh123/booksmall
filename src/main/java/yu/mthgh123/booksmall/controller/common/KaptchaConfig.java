@@ -6,6 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.util.Properties;
+/**
+ * @author yu
+ * @link https://github.com/mthgh123/booksmall
+ */
 
 @Component
 public class KaptchaConfig {

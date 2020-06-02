@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;

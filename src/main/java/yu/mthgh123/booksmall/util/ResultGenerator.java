@@ -6,7 +6,7 @@ import org.springframework.util.StringUtils;
  * 响应结果生成工具
  *
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 public class ResultGenerator {
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";

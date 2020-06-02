@@ -2,7 +2,7 @@ package yu.mthgh123.booksmall.common;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  * @apiNote 首页配置项 1-搜索框热搜 2-搜索下拉框热搜 3-(首页)热门推荐 4-(首页)新书上线
  */
 public enum IndexConfigTypeEnum {

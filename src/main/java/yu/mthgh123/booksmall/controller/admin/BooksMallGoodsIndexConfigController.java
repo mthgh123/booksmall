@@ -18,7 +18,7 @@ import java.util.Objects;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 @Controller
 @RequestMapping("/admin")
@@ -36,7 +36,7 @@ public class BooksMallGoodsIndexConfigController {
 
         request.setAttribute("path", indexConfigTypeEnum.getName());
         request.setAttribute("configType", configType);
-        return "admin/newbee_mall_index_config";
+        return "admin/books_mall_index_config";
     }
 
     /**

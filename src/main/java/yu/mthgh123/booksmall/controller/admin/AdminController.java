@@ -1,6 +1,5 @@
 package yu.mthgh123.booksmall.controller.admin;
 
-import yu.mthgh123.booksmall.common.ServiceResultEnum;
 import yu.mthgh123.booksmall.entity.AdminUser;
 import yu.mthgh123.booksmall.service.AdminUserService;
 

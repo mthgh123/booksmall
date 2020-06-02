@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * newbee-mall系统身份验证拦截器
- *
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 @Component
 public class BooksMallLoginInterceptor implements HandlerInterceptor {

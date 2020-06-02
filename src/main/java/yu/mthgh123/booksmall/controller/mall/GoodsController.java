@@ -20,6 +20,11 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+/**
+ * @author yu
+ * @link https://github.com/mthgh123/booksmall
+ */
+
 @Controller
 public class GoodsController {
 

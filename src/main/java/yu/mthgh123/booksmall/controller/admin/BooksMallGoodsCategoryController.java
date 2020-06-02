@@ -18,7 +18,7 @@ import java.util.*;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 @Controller
 @RequestMapping("/admin")
@@ -35,7 +35,7 @@ public class BooksMallGoodsCategoryController {
         request.setAttribute("path", "books_mall_category");
         request.setAttribute("parentId", parentId);
         request.setAttribute("categoryLevel", categoryLevel);
-        return "admin/newbee_mall_category";
+        return "admin/books_mall_category";
     }
 
     /**

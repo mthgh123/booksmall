@@ -7,7 +7,7 @@ import java.util.Map;
  * 分页查询参数
  *
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 public class PageQueryUtil extends LinkedHashMap<String, Object> {
     //当前页码

@@ -17,7 +17,7 @@ import java.util.Objects;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 @Controller
 @RequestMapping("/admin")
@@ -28,8 +28,8 @@ public class BooksMallCarouselController {
 
     @GetMapping("/carousels")
     public String carouselPage(HttpServletRequest request) {
-        request.setAttribute("path", "newbee_mall_carousel");
-        return "admin/newbee_mall_carousel";
+        request.setAttribute("path", "books_mall_carousel");
+        return "admin/books_mall_carousel";
     }
 
     /**

@@ -5,7 +5,8 @@ import org.springframework.util.StringUtils;
 import java.net.URI;
 
 /**
- * @author 13
+ * @author yu
+ * @link https://github.com/mthgh123/booksmall
  */
 public class BooksMallUtils {
 

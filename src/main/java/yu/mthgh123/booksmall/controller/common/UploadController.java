@@ -22,7 +22,7 @@ import java.util.Random;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 @Controller
 @RequestMapping("/admin")

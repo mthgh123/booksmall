@@ -1,10 +1,8 @@
 package yu.mthgh123.booksmall.common;
 
 /**
- * @author 13
- * @qq交流群 796794009
- * @email 2449207463@qq.com
- * @link https://github.com/newbee-ltd
+ * @author yu
+ * @link https://github.com/mthgh123/booksmall
  * @apiNote 分类级别
  */
 public enum BooksMallCategoryLevelEnum {
@@ -23,7 +21,7 @@ public enum BooksMallCategoryLevelEnum {
         this.name = name;
     }
 
-    public static BooksMallCategoryLevelEnum getNewBeeMallOrderStatusEnumByLevel(int level) {
+    public static BooksMallCategoryLevelEnum getBOOKSMallOrderStatusEnumByLevel(int level) {
         for (BooksMallCategoryLevelEnum booksMallCategoryLevelEnum : BooksMallCategoryLevelEnum.values()) {
             if (booksMallCategoryLevelEnum.getLevel() == level) {
                 return booksMallCategoryLevelEnum;

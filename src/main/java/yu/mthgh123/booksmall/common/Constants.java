@@ -2,7 +2,7 @@ package yu.mthgh123.booksmall.common;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  * @apiNote 常量配置
  */
 public class Constants {
@@ -24,7 +24,7 @@ public class Constants {
 
     public final static String MALL_VERIFY_CODE_KEY = "mallVerifyCode";//验证码key
 
-    public final static String MALL_USER_SESSION_KEY = "newBeeMallUser";//session中user的key
+    public final static String MALL_USER_SESSION_KEY = "booksMallUser";//session中user的key
 
     public final static int GOODS_SEARCH_PAGE_LIMIT = 10;//搜索分页的默认条数(每页10条)
 

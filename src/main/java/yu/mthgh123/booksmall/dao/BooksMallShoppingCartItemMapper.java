@@ -14,11 +14,11 @@ public interface BooksMallShoppingCartItemMapper {
 
     BooksMallShoppingCartItem selectByPrimaryKey(Long cartItemId);
 
-    BooksMallShoppingCartItem selectByUserIdAndGoodsId(@Param("newBeeMallUserId") Long newBeeMallUserId, @Param("goodsId") Long goodsId);
+    BooksMallShoppingCartItem selectByUserIdAndGoodsId(@Param("booksMallUserId") Long booksMallUserId, @Param("goodsId") Long goodsId);
 
-    List<BooksMallShoppingCartItem> selectByUserId(@Param("newBeeMallUserId") Long newBeeMallUserId, @Param("number") int number);
+    List<BooksMallShoppingCartItem> selectByUserId(@Param("booksMallUserId") Long booksMallUserId, @Param("number") int number);
 
-    int selectCountByUserId(Long newBeeMallUserId);
+    int selectCountByUserId(Long booksMallUserId);
 
     int updateByPrimaryKeySelective(BooksMallShoppingCartItem record);
 

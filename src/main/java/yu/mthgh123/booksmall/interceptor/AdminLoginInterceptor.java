@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 后台系统身份验证拦截器
  *
- * @author 13
- * @link https://github.com/
+ * @author yu
+ * @link https://github.com/mthgh123/booksmall
  */
 @Component
 public class AdminLoginInterceptor implements HandlerInterceptor {

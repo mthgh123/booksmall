@@ -24,7 +24,7 @@ import java.util.Objects;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 @Controller
 @RequestMapping("/admin")
@@ -37,8 +37,8 @@ public class BooksMallGoodsController {
 
     @GetMapping("/goods")
     public String goodsPage(HttpServletRequest request) {
-        request.setAttribute("path", "newbee_mall_goods");
-        return "admin/newbee_mall_goods";
+        request.setAttribute("path", "books_mall_goods");
+        return "admin/books_mall_goods";
     }
 
     @GetMapping("/goods/edit")
@@ -55,7 +55,7 @@ public class BooksMallGoodsController {
                 request.setAttribute("firstLevelCategories", firstLevelCategories);
                 request.setAttribute("secondLevelCategories", secondLevelCategories);
                 request.setAttribute("path", "goods-edit");
-                return "admin/newbee_mall_goods_edit";
+                return "admin/books_mall_goods_edit";
             }
         }
         return "error/error_5xx";
@@ -108,7 +108,7 @@ public class BooksMallGoodsController {
         }
         request.setAttribute("goods", booksMallGoods);
         request.setAttribute("path", "goods-edit");
-        return "admin/newbee_mall_goods_edit";
+        return "admin/books_mall_goods_edit";
     }
 
     /**

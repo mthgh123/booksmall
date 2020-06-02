@@ -2,7 +2,7 @@ package yu.mthgh123.booksmall.common;
 
 /**
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 public enum ServiceResultEnum {
     ERROR("error"),

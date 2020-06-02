@@ -7,7 +7,7 @@ import java.util.List;
  * 分页工具类
  *
  * @author yu
- * @link https://github.com/
+ * @link https://github.com/mthgh123/booksmall
  */
 public class PageResult implements Serializable {
 
