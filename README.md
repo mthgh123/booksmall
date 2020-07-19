@@ -6,6 +6,14 @@
 
 本项目涉及到的技术有：thymeleaf、mybatis、springboot、mysql以及一些列的前端技术，如：jquery、ajax、bootstrap等等。
 ### 站点页面展示
+#### 前端商城页面：
+##### 首页页面
+主要是显示了轮播图、热门书籍、新书上线等
+![首页页面1](http://qiniusave.codeyu.cn/books_mall_05.PNG)
+![首页页面2](http://qiniusave.codeyu.cn/books_mall_06.PNG)
+##### 分类页面
+左侧分类框用于显示二级分类，右侧根据不同的排序方式用于显示书籍（这部分还未开发）
+![分类页面1](http://qiniusave.codeyu.cn/books_mall_07.PNG)
 #### 后端管理系统页面：
 ##### 轮播图配置页面
 ![轮播图配置页面](http://qiniusave.codeyu.cn/books_mall_01.PNG)
@@ -17,14 +25,6 @@
 ##### 书籍管理页面
 主要是用于书籍的上下架，添加新的书籍或修改原有书籍相关信息等
 ![书籍管理页面](http://qiniusave.codeyu.cn/books_mall_04.PNG)
-#### 前端商城页面：
-##### 首页页面
-主要是显示了轮播图、热门书籍、新书上线等
-![首页页面1](http://qiniusave.codeyu.cn/books_mall_05.PNG)
-![首页页面2](http://qiniusave.codeyu.cn/books_mall_06.PNG)
-##### 分类页面
-左侧分类框用于显示二级分类，右侧根据不同的排序方式用于显示书籍（这部分还未开发）
-![分类页面1](http://qiniusave.codeyu.cn/books_mall_07.PNG)
 #### 该项目还未开发的功能模块
 数据的详情页面、用户/管理员修改密码、我的书架页面、根据分类直接定位到对应书籍。后续有时间的话作者会开发相关模块。
 
