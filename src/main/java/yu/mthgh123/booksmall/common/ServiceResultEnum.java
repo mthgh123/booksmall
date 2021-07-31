@@ -11,6 +11,12 @@ public enum ServiceResultEnum {
 
     DATA_NOT_EXIST("未查询到记录！"),
 
+    DATA_IS_NULL("数据为空"),
+
+    PASSWORD_ERROR("原密码错误"),
+
+    JUST_FAILED("操作失败"),
+
     SAME_CATEGORY_EXIST("有同级同名的分类！"),
 
     SAME_LOGIN_NAME_EXIST("用户名已存在！"),
@@ -55,7 +61,7 @@ public enum ServiceResultEnum {
 
     private String result;
 
-    //这个方法有点特别
+    //这个方法有点特别：构造器方法
     ServiceResultEnum(String result) {
         this.result = result;
     }

@@ -1,5 +1,9 @@
 package yu.mthgh123.booksmall.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
+import org.springframework.boot.web.servlet.filter.OrderedHiddenHttpMethodFilter;
+import yu.mthgh123.booksmall.common.ServiceResultEnum;
 import yu.mthgh123.booksmall.dao.AdminUserMapper;
 import yu.mthgh123.booksmall.entity.AdminUser;
 import yu.mthgh123.booksmall.service.AdminUserService;
@@ -21,6 +25,14 @@ public class AdminUserServiceImpl implements AdminUserService {
     @Override
     public AdminUser getUserDetailById(Integer loginUserId) {
         return adminUserMapper.selectByPrimaryKey(loginUserId);
+    }
+
+    @Override
+    public String updatePassword(Integer loginUserId, String newPassword) {
+        if (adminUserMapper.updatePassword(loginUserId, newPassword) > 0) {
+            return ServiceResultEnum.SUCCESS.getResult();
+        }
+        return ServiceResultEnum.ERROR.getResult();
     }
 }
 

@@ -2,6 +2,7 @@ $(function () {
     var categoryLevel = $("#categoryLevel").val();
     var parentId = $("#parentId").val();
 
+    /*从books_mall_category.js页面跳转至此就会执行下方的jqGrid插件方法，其中的url对应controller方法去数据取值，之后将这些取到的数据数据显示到html页面中去*/
     $("#jqGrid").jqGrid({
         url: '/admin/categories/list?categoryLevel=' + categoryLevel + '&parentId=' + parentId,
         datatype: "json",

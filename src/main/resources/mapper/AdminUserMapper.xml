@@ -31,4 +31,10 @@ where admin_user_id = #{adminUserId,jdbcType=INTEGER}
     values (#{adminUserId,jdbcType=INTEGER}, #{loginUserName,jdbcType=VARCHAR}, #{loginPassword,jdbcType=VARCHAR},
       #{nickName,jdbcType=VARCHAR}, #{locked,jdbcType=TINYINT})
   </insert>
+
+<update id="updatePassword">
+    update books_mall_admin_user
+    set login_password=#{newPassword}
+    where admin_user_id=#{adminUserId}
+</update>
 </mapper>

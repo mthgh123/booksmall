@@ -1,10 +1,12 @@
 package yu.mthgh123.booksmall.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import yu.mthgh123.booksmall.entity.BooksMallGoods;
 import yu.mthgh123.booksmall.util.PageQueryUtil;
 import yu.mthgh123.booksmall.util.PageResult;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BooksMallGoodsService {
     /**
@@ -13,7 +15,18 @@ public interface BooksMallGoodsService {
      * @param pageUtil
      * @return
      */
+    @Cacheable(key ="'getBooksList_'+#currentPage+#limit",value ="getBooksList")
     PageResult getBooksMallGoodsPage(PageQueryUtil pageUtil);
+
+    /**
+     * 通过Es获取书籍数据
+     * @param keywords
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    @Cacheable(key ="'esSearchBooksList'+keywords+#pageNum+#pageSize",value ="getBooksList")
+    List<Map<String,Object>> esSearchBooksList(String keywords, int pageNum, int pageSize);
 
     /**
      * 添加商品

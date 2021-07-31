@@ -20,4 +20,11 @@ public interface AdminUserService {
      * @return
      */
     AdminUser getUserDetailById(Integer loginUserId);
+
+    /**
+     * 更新密码
+     * @param loginUserId
+     * @return
+     */
+    String updatePassword(Integer loginUserId, String newPassword);
 }

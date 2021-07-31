@@ -28,6 +28,7 @@ $(function () {
         var originalPassword = $('#originalPassword').val();
         var newPassword = $('#newPassword').val();
         if (validPasswordForUpdate(originalPassword, newPassword)) {
+            //ajax提交数据
             var params = $("#userPasswordForm").serialize();
             $.ajax({
                 type: "POST",

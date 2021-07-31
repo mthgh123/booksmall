@@ -25,8 +25,8 @@ public class BooksMallWebMvcConfigurer implements WebMvcConfigurer {
         registry.addInterceptor(adminLoginInterceptor)
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/login")
-                .excludePathPatterns("/admin/dist/**")
-                .excludePathPatterns("/admin/plugins/**");
+                .excludePathPatterns("/admin/dist/**") //不要拦截静态资源，否则造成前端页面加载不是各种css样式，插件之类的
+                .excludePathPatterns("/admin/plugins/**"); //不要拦截静态资源
         // 购物车中的数量统一处理
         registry.addInterceptor(booksMallCartNumberInterceptor)
                 .excludePathPatterns("/admin/**")

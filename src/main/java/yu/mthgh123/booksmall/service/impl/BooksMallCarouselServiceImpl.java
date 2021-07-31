@@ -1,5 +1,8 @@
 package yu.mthgh123.booksmall.service.impl;
 
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import yu.mthgh123.booksmall.common.ServiceResultEnum;
 import yu.mthgh123.booksmall.controller.vo.BooksMallIndexCarouselVO;
 import yu.mthgh123.booksmall.dao.CarouselMapper;
